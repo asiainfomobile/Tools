@@ -1,0 +1,368 @@
+void -[WCRedEnvelopesLogicMgr GetHongbaoBusinessRequest:CMDID:OutputType:](void * self, void * _cmd, void * arg2, unsigned long arg3, unsigned long arg4) {
+    r7 = (sp - 0x4 - 0x4 - 0x4 - 0x4 - 0x4) + 0xc;
+    sp = sp - 0x4 - 0x4 - 0x4 - 0x4 - 0x4 - 0x4 - 0x4 - 0x4 - 0xac;
+    stack[2056] = arg3;
+    stack[2057] = self;
+    stack[2090] = *___stack_chk_guard;
+    r6 = loc_e0b370(arg2, _cmd, arg2, arg3, arg4, stack[2049], stack[2050], stack[2051], stack[2052], stack[2053]);
+    stack[2064] = r6;
+    loc_e0b35c(@class(HongBaoReq), @selector(alloc));
+    stack[2058] = loc_e0b35c();
+    loc_e0b35c(@class(SKBuiltinBuffer_t), @selector(alloc));
+    stack[2055] = loc_e0b35c();
+    loc_e0b35c(@class(NSMutableDictionary), @selector(dictionary), 0x26fd9c4);
+    r7 = r7;
+    r0 = sub_e0b368();
+    r4 = sp + 0x48;
+    asm{ vmov.i32   q8, #0x0 };
+    stack[2065] = r0;
+    r0 = 0x1cd9114;
+    asm{ vst1.32    {d16, d17}, [r1]! };
+    r0 = r0 + 0x9f8824;
+    asm{ vst1.32    {d16, d17}, [r1] };
+    loc_e0b35c(r6, *r0);
+    r7 = r7;
+    stack[2060] = sub_e0b368();
+    stack[2059] = @selector(countByEnumeratingWithState:objects:count:);
+    r5 = loc_e0b35c();
+    if (r5 != 0x0) {
+            stack[2063] = @selector(safeSetObject:forKey:);
+            r4 = @selector(objectForKey:);
+            stack[2062] = @selector(gtm_stringByEscapingForURLArgument);
+            stack[2061] = *stack[2068];
+            do {
+                    r10 = 0x0;
+                    do {
+                            if (CPU_FLAGS & NE) {
+                                    loc_e0b380();
+                            }
+                            r6 = *(stack[2067] + (r10 << stack[2067]));
+                            loc_e0b35c(stack[2064], r4, r6);
+                            r8 = sub_e0b368();
+                            loc_e0b35c();
+                            r7 = r7;
+                            r11 = sub_e0b368();
+                            loc_e0b35c(stack[2065], stack[2063], r11, r6);
+                            loc_e0b36c(r11);
+                            loc_e0b36c(r8);
+                            r10 = r10 + 0x1;
+                    } while (r10 < r5);
+                    r5 = loc_e0b35c(stack[2060], stack[2059], sp + 0x48, sp + 0x68, 0x10);
+            } while (r5 != 0x0);
+    }
+    loc_e0b36c(stack[2060]);
+    r1 = @selector(stringWithFormEncodedComponentsAscending:ascending:skipempty:separator:);
+    r0 = @class(WCBizUtil);
+    asm{ strd       r2, r3, [sp, #-0x8 + ret_addr] };
+    loc_e0b35c(r0, r1, stack[2065], 0x1);
+    r7 = r7;
+    r4 = sub_e0b368();
+    r1 = @selector(logWithLevel:module:errorCode:file:line:func:format:);
+    r0 = @class(iConsole);
+    stack[2048] = 0x0;
+    asm{ stm.w      r8, {r2, r5, r6, sb} };
+    r11 = stack[2056];
+    r8 = stack[2064];
+    loc_e0b35c(r0, r1, 0x1, "WCRedEnvelopes", stack[2048]);
+    r10 = sub_e0b3cc(r4);
+    r4 = loc_e0b35c(r10, @selector(UTF8String));
+    r3 = sub_e0b440(r4);
+    loc_e0b35c(@class(NSData), @selector(dataWithBytes:length:), r4, r3);
+    r7 = r7;
+    r4 = sub_e0b368();
+    r5 = stack[2055];
+    loc_e0b35c(r5, @selector(setBuffer:), r4);
+    r0 = loc_e0b35c(r4, @selector(length));
+    loc_e0b35c(r5, @selector(setILen:), r0);
+    r6 = stack[2058];
+    loc_e0b35c(r6, @selector(setReqText:), r5);
+    loc_e0b35c(r6, @selector(setCgiCmd:), r11);
+    loc_e0b35c(r6, @selector(setOutPutType:), arg4);
+    r2 = r6;
+    r0 = stack[2057]->m_networkHelper;
+    loc_e0b35c(r0, @selector(WCToHongbaoCommonRequest:), r2);
+    loc_e0b36c(r4);
+    loc_e0b36c(r10);
+    loc_e0b36c(stack[2065]);
+    loc_e0b36c(r5);
+    loc_e0b36c(r6);
+    loc_e0b36c(r8);
+    r1 = *___stack_chk_guard;
+    r0 = r1 - stack[2090];
+    COND = r0 == 0x0;
+    if (COND) {
+            sp = sp + 0xac;
+    }
+    if (CPU_FLAGS & E) {
+            return;
+    }
+    r0 = loc_e0b37c();
+    asm{ nop         };
+    r7 = (sp - 0x4 - 0x4 - 0x4 - 0x4 - 0x4) + 0xc;
+    sp = sp - 0x4 - 0x4 - 0x4 - 0x4 - 0x4 - 0x4 - 0x4 - 0x4 - 0x9c;
+    stack[2050] = r3;
+    stack[2054] = r0;
+    stack[2086] = *___stack_chk_guard;
+    r6 = loc_e0b370(r2);
+    stack[2061] = r6;
+    stack[2052] = loc_e0b370(arg4, 0x26ffbc0);
+    loc_e0b35c(@class(FestivalHongBaoReq), @selector(alloc));
+    stack[2053] = loc_e0b35c();
+    loc_e0b35c(@class(SKBuiltinBuffer_t), @selector(alloc));
+    stack[2051] = loc_e0b35c();
+    loc_e0b35c(@class(NSMutableDictionary), @selector(dictionary), 0x26fd9c4);
+    r7 = r7;
+    r0 = sub_e0b368();
+    r4 = sp + 0x38;
+    asm{ vmov.i32   q8, #0x0 };
+    stack[2060] = r0;
+    r0 = 0x1cd8db6;
+    asm{ vst1.32    {d16, d17}, [r1]! };
+    r0 = r0 + 0x9f8b82;
+    asm{ vst1.32    {d16, d17}, [r1] };
+    loc_e0b35c(r6, *r0);
+    r7 = r7;
+    stack[2056] = sub_e0b368();
+    stack[2055] = @selector(countByEnumeratingWithState:objects:count:);
+    r5 = loc_e0b35c();
+    if (r5 != 0x0) {
+            stack[2059] = @selector(safeSetObject:forKey:);
+            r4 = @selector(objectForKey:);
+            stack[2058] = @selector(gtm_stringByEscapingForURLArgument);
+            stack[2057] = *stack[2064];
+            do {
+                    r10 = 0x0;
+                    do {
+                            if (CPU_FLAGS & NE) {
+                                    loc_e0b380();
+                            }
+                            r8 = *(stack[2063] + (r10 << stack[2063]));
+                            loc_e0b35c(stack[2061], r4, r8);
+                            r11 = sub_e0b368();
+                            loc_e0b35c();
+                            r7 = r7;
+                            r6 = sub_e0b368();
+                            loc_e0b35c(stack[2060], stack[2059], r6, r8);
+                            loc_e0b36c(r6);
+                            loc_e0b36c(r11);
+                            r10 = r10 + 0x1;
+                    } while (r10 < r5);
+                    r5 = loc_e0b35c(stack[2056], stack[2055], sp + 0x38, sp + 0x58, 0x10);
+            } while (r5 != 0x0);
+    }
+    loc_e0b36c(stack[2056]);
+    r1 = @selector(stringWithFormEncodedComponentsAscending:ascending:skipempty:separator:);
+    r0 = @class(WCBizUtil);
+    r11 = stack[2060];
+    asm{ strd       r2, r3, [sp, #-0x8 + ret_addr] };
+    loc_e0b35c(r0, r1, r11, 0x1);
+    sub_e0b368();
+    r8 = sub_e0b3cc();
+    r4 = loc_e0b35c(r8, @selector(UTF8String));
+    r3 = sub_e0b440(r4);
+    loc_e0b35c(@class(NSData), @selector(dataWithBytes:length:), r4, r3);
+    r7 = r7;
+    r10 = sub_e0b368();
+    r4 = stack[2051];
+    loc_e0b35c(r4, @selector(setBuffer:), r10);
+    r0 = loc_e0b35c(r10, @selector(length));
+    loc_e0b35c(r4, @selector(setILen:), r0);
+    r6 = stack[2053];
+    loc_e0b35c(r6, @selector(setReqText:), r4);
+    loc_e0b35c(r6, @selector(setCgiCmd:), stack[2050]);
+    loc_e0b35c(r6, @selector(setOutPutType:), arg_1);
+    r5 = stack[2052];
+    loc_e0b35c(r6, @selector(setSendKey:), r5);
+    loc_e0b36c(r5);
+    r0 = stack[2054]->m_networkHelper;
+    r2 = r6;
+    loc_e0b35c(r0, @selector(WCToEnterpriseHBBizReq:), r2);
+    loc_e0b36c(r10);
+    loc_e0b36c(r8);
+    loc_e0b36c(r11);
+    loc_e0b36c(r4);
+    loc_e0b36c(r6);
+    loc_e0b36c(stack[2061]);
+    r1 = *___stack_chk_guard;
+    r0 = r1 - stack[2086];
+    COND = r0 == 0x0;
+    if (COND) {
+            sp = sp + 0x9c;
+    }
+    if (CPU_FLAGS & E) {
+            return;
+    }
+    r7 = (sp - 0x4 - 0x4 - 0x4 - 0x4 - 0x4) + 0xc;
+    sp = sp - 0x4 - 0x4 - 0x4 - 0x4 - 0x4 - 0x4 - 0x4 - 0x4 - 0x98;
+    stack[2051] = r3;
+    stack[2053] = loc_e0b37c();
+    stack[2085] = *___stack_chk_guard;
+    r6 = loc_e0b370(r2);
+    stack[2060] = r6;
+    loc_e0b35c(@class(HongBaoReq), @selector(alloc));
+    stack[2052] = loc_e0b35c();
+    loc_e0b35c(@class(SKBuiltinBuffer_t), @selector(alloc));
+    stack[2050] = loc_e0b35c();
+    loc_e0b35c(@class(NSMutableDictionary), @selector(dictionary), 0x26fd9c4);
+    r7 = r7;
+    r0 = sub_e0b368();
+    r4 = sp + 0x34;
+    asm{ vmov.i32   q8, #0x0 };
+    stack[2059] = r0;
+    r0 = 0x1cd8ab0;
+    asm{ vst1.32    {d16, d17}, [r1]! };
+    r0 = r0 + 0x9f8e88;
+    asm{ vst1.32    {d16, d17}, [r1] };
+    loc_e0b35c(r6, *r0);
+    r7 = r7;
+    stack[2055] = sub_e0b368();
+    stack[2054] = @selector(countByEnumeratingWithState:objects:count:);
+    r6 = loc_e0b35c();
+    if (r6 != 0x0) {
+            stack[2058] = @selector(safeSetObject:forKey:);
+            r4 = @selector(objectForKey:);
+            stack[2057] = @selector(gtm_stringByEscapingForURLArgument);
+            stack[2056] = *stack[2063];
+            do {
+                    r10 = 0x0;
+                    do {
+                            if (CPU_FLAGS & NE) {
+                                    loc_e0b380();
+                            }
+                            r5 = *(stack[2062] + (r10 << stack[2062]));
+                            loc_e0b35c(stack[2060], r4, r5);
+                            r8 = sub_e0b368();
+                            loc_e0b35c();
+                            r7 = r7;
+                            r11 = sub_e0b368();
+                            loc_e0b35c(stack[2059], stack[2058], r11, r5);
+                            loc_e0b36c(r11);
+                            loc_e0b36c(r8);
+                            r10 = r10 + 0x1;
+                    } while (r10 < r6);
+                    r6 = loc_e0b35c(stack[2055], stack[2054], sp + 0x34, sp + 0x54, 0x10);
+            } while (r6 != 0x0);
+    }
+    loc_e0b36c(stack[2055]);
+    r1 = @selector(stringWithFormEncodedComponentsAscending:ascending:skipempty:separator:);
+    r0 = @class(WCBizUtil);
+    r10 = stack[2059];
+    asm{ strd       r2, r3, [sp, #-0x8 + ret_addr] };
+    loc_e0b35c(r0, r1, r10, 0x1);
+    sub_e0b368();
+    r8 = sub_e0b3cc();
+    r4 = loc_e0b35c(r8, @selector(UTF8String));
+    r0 = sub_e0b440(r4);
+    loc_e0b35c(@class(NSData), @selector(dataWithBytes:length:), r4, r0);
+    r7 = r7;
+    r4 = sub_e0b368();
+    r6 = stack[2050];
+    loc_e0b35c(r6, @selector(setBuffer:), r4);
+    r0 = loc_e0b35c(r4, @selector(length));
+    loc_e0b35c(r6, @selector(setILen:), r0);
+    r5 = stack[2052];
+    loc_e0b35c(r5, @selector(setReqText:), r6);
+    loc_e0b35c(r5, @selector(setCgiCmd:), stack[2051]);
+    loc_e0b35c(r5, @selector(setOutPutType:), arg_1);
+    r0 = stack[2053]->m_networkHelper;
+    r2 = r5;
+    loc_e0b35c(r0, @selector(WCToEnterpriseCommonBizReq:), r2);
+    loc_e0b36c(r4);
+    loc_e0b36c(r8);
+    loc_e0b36c(r10);
+    loc_e0b36c(r6);
+    loc_e0b36c(r5);
+    loc_e0b36c(stack[2060]);
+    r1 = *___stack_chk_guard;
+    r0 = r1 - stack[2085];
+    COND = r0 == 0x0;
+    if (COND) {
+            sp = sp + 0x98;
+    }
+    if (CPU_FLAGS & E) {
+            return;
+    }
+    r0 = loc_e0b37c();
+    asm{ nop         };
+    r7 = (sp - 0x4 - 0x4 - 0x4 - 0x4 - 0x4) + 0xc;
+    sp = sp - 0x4 - 0x4 - 0x4 - 0x4 - 0x4 - 0x4 - 0x4 - 0x4 - 0x24;
+    r5 = r0;
+    r4 = loc_e0b370(r2);
+    loc_e0b35c(@class(WCBizUtil), @selector(getWCRedEnvelopesUserInfoPath), 0x26fdbc4);
+    r6 = sub_e0b368();
+    loc_e0b35c(@class(CUtility), @selector(SafeUnarchive:), r6);
+    r7 = r7;
+    r0 = sub_e0b368();
+    stack[2056] = r0;
+    if (r0 != 0x0) {
+            stack[2050] = r6;
+            stack[2051] = r5;
+            stack[2052] = r4;
+            loc_e0b35c(@class(MMServiceCenter), @selector(defaultCenter));
+            r4 = sub_e0b368();
+            r0 = loc_e0b35c(@class(LazyExtensionAgent), @selector(class));
+            loc_e0b35c(r4, @selector(getService:), r0);
+            r5 = sub_e0b368();
+            r11 = @selector(OnQueryRedEnvelopesUserInfo:Error:);
+            loc_e0b35c(r5, @selector(ensureLazyListenerInitedForExtension:withSelector:), @protocol(WCRedEnvelopesLogicMgrExt), r11);
+            loc_e0b36c(r5);
+            loc_e0b36c(r4);
+            loc_e0b35c(@class(MMServiceCenter), @selector(defaultCenter));
+            r4 = sub_e0b368();
+            r0 = loc_e0b35c(@class(MMExtensionCenter), @selector(class));
+            loc_e0b35c(r4, @selector(getService:), r0);
+            r5 = sub_e0b368();
+            loc_e0b35c(r5, @selector(getExtension:), @protocol(WCRedEnvelopesLogicMgrExt));
+            r7 = r7;
+            r6 = sub_e0b368();
+            loc_e0b36c(r5);
+            loc_e0b36c(r4);
+            if (r6 != 0x0) {
+                    stack[2049] = r6;
+                    stack[2055] = r11;
+                    loc_e0b35c(r6, @selector(getExtensionListForSelector:), r11);
+                    r7 = r7;
+                    r8 = sub_e0b368();
+                    r6 = @selector(count);
+                    stack[2054] = r6;
+                    if (loc_e0b35c(r8, r6) != 0x0) {
+                            r4 = 0x0;
+                            r5 = @selector(m_deleteMark);
+                            r10 = @selector(objectAtIndex:);
+                            stack[2053] = @selector(getObject);
+                            do {
+                                    loc_e0b35c(r8, r10, r4);
+                                    r7 = r7;
+                                    r11 = sub_e0b368();
+                                    if (zero_extend_32(loc_e0b35c()) != 0x1) {
+                                            loc_e0b35c(r11, stack[2053]);
+                                            r7 = r7;
+                                            r6 = r8;
+                                            r8 = r10;
+                                            r10 = sub_e0b368();
+                                            loc_e0b35c();
+                                            r0 = r10;
+                                            r10 = r8;
+                                            r8 = r6;
+                                            r6 = stack[2054];
+                                            loc_e0b36c(r0);
+                                    }
+                                    loc_e0b36c(r11);
+                                    r4 = r4 + 0x1;
+                            } while (r4 < loc_e0b35c(r8, r6));
+                    }
+                    loc_e0b36c(r8);
+                    r6 = stack[2049];
+            }
+            loc_e0b36c(r6);
+            r4 = stack[2052];
+            r5 = stack[2051];
+            r6 = stack[2050];
+    }
+    loc_e0b35c(r5, @selector(GetHongbaoBusinessRequest:CMDID:OutputType:), r4, 0x0, 0x1);
+    loc_e0b36c(stack[2056]);
+    loc_e0b36c(r6);
+    loc_e0b364(r4);
+    loc_1c0dd3c();
+    return;
+}
